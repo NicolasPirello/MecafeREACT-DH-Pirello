@@ -1,0 +1,1040 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700;900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+    --mainColor: #29335C;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #DB2B39 ;
+    --textColor: white;
+    --lime: #c7db00;
+    --cilantro: #7aa802;
+    --lox: #f78b2d;
+    --toas: #e4b600;
+    --black: #000000;
+    --negro-pastel: rgb(20, 20, 20);
+    --blue-pastel: #4e89e5;
+    --green-pastel-btn: #77dd77;
+    --red-pastel-btn: #ff6961;
+    --gray-pastel: #cdcdcd;
+    --naranja-ligero: #fab273;
+    --naranja-oscuro: #e16d09;
+    --cilantro-saturado: #83bd00;
+    --cilantro-oscuro: #628602;
+    --azul: rgba(5, 5, 242, 0.7);
+    --blanco-original: #fbfcfc;
+    --email: #2420df;
+    --marron-original: #d5a16a;
+    --marron-original-desgastado: rgba(213, 161, 106, 0.5);
+    --naranja-transparante: rgba(255, 137, 20, 0.4);
+    --naranja-transparante-borde: rgba(255, 137, 20, 0.5);
+    --negro-intenso: #0a0a0a;
+    --whatsapp: #29df20;
+    --naranja: #f78b2d;
+    --tamanoFooter: 160px;
+    --navBar: 70px;
+    --paddingArribaFooter: 90px;
+    --tamanoImageError404: 300px ;
+    --gray-pastel-ligth: #eeeeee;
+}
+
+/**  -------------------- GENERAL -------------------- */
+
+#root{
+    background: #eee;
+}
+
+.contenedorPrincipal {
+    min-height: calc(100vh - var(--tamanoFooter) - var(--navBar));
+    z-index: 1;
+} 
+
+.containerCenterWeb{
+    border: solid 1px var(--gray-pastel);
+    border-radius: 2px;
+    background: white
+}
+
+.generalFormat{
+    margin: 10px;
+    padding: 15px;
+    /* border: solid 1px var(--gray-pastel); */
+}
+
+/**  -------------------- COMPONENTE NAVBAR -------------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navBar);
+    padding: 0 2rem;
+    background-color: var(--negro-pastel);
+    color: var(--textColor);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--lox);
+    transition: .5s;
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    font-size: 1.8rem;
+}
+
+header .nav-btn {
+    visibility: visible;
+    opacity: 100;
+}
+
+header .responsive_nav {
+    transform: none;
+    z-index: 1;
+}
+
+nav .nav-close-btn{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+nav a{
+    font-size: 1.5rem;
+
+}
+
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--negro-pastel);
+    transition: 1s;
+    transform: translateY(-100vh);
+}
+
+.headerTitle{
+    font-size: 1.5em;
+}
+
+.headerTitle__onePart{
+    color: white;
+}
+
+.headerTitle__secondPart{
+    color: var(--lox)
+}
+
+.headerBtnOpen:hover {
+    color: var(--lox);
+    transition: .5s
+}
+
+.headerBtnClose:hover {
+    color: rgb(231, 49, 49);
+    transition: .5s
+}
+
+/**  -------------------- COMPONENTE FOOTER -------------------- */
+
+.newFooter {
+
+    /* position: absolute; /* BORRAR QUIZAS */ 
+    left: 0;
+    width: 100%;
+    height: var(--tamanoFooter); /* Es el calculo del Footer, deberia ser una variable. */
+    background-color: var(--negro-pastel);
+}
+
+.newFooter__container{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    width: 90%;
+    margin: auto;
+    align-items: stretch;
+    max-height: var(--tamanoFooter);
+    /* overflow: hidden; Quizas BORRAR */
+    padding: 15px 0 15px;
+    max-width: 1000px;
+}
+
+.newFooter__desktop{
+    display: none;
+}
+
+.newFooter__box{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    column-gap: 15px;
+    justify-items: center
+}
+
+.newFooter__container h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.newFooter__container p {
+    font-size: 10px;
+    padding: 7px 0;
+    color: var(--gray-pastel)
+}
+
+.newFooter__itemsBox{
+    padding-left: 7px;
+    border-left: solid 1px var(--lox)
+}
+
+.newFooter__itemsBox .fa-square-whatsapp {
+    color: var(--whatsapp);
+}
+
+.newFooter__itemsBox .fa-address-card {
+    color: #0f82fc
+}
+
+.newFooter__itemsBox .Twitter {
+    color: #1C9CEA;
+}
+
+.newFooter__itemsBox .fa-square-instagram {
+    color: #DE4568;
+}
+
+.newFooter__itemsBox .fa-square-github {
+    color: #9642A2;
+}
+
+.newFooter__titleSpan{
+    color: var(--lox);
+}
+
+/**  -------------------- COMPONENTE DASHBOARD -------------------- */
+
+/* ? CARDS */
+
+.dashboard_card{
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.dashboard_card h4{
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    color: green;
+    height: 40px;
+    align-items: center;
+    display: flex;
+}
+
+.dashboard_card p{
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.dashboard_cardColor{
+    border-left: solid 3px green;
+}
+
+.dashboard_cardContainer{
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.dashboard_cardContainer .gramesContainer{
+    display: flex;
+    gap: 15px;
+}
+
+.dashboard_cardContainer .gramesBox {
+    display: flex;
+    align-items: baseline;
+}
+
+.gramesContainer span{
+    text-transform: uppercase;
+}
+
+/* ? PRODUCT DETAIL */
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.cardIcon{
+    font-size: 2.5em;
+    color: var(--gray-pastel);
+    
+}
+
+.dashboard_ProductDetail{
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 2px;
+}
+
+.dashboard_ProductDetail .productImageContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard_ProductDetail img{
+    margin: 10px;
+    width: 90%;
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 2px;
+}
+
+.dashboard_ProductDetail .ProductTitle {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.dashboard_ProductDetail .ProductTitle h6 {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    border-bottom: solid 2px var(--lox);
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.productDescriptionContainer{
+    text-align: center;
+}
+
+.productDescriptionContainer h6{
+    padding: 10px 0;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.productDescriptionContainer p{
+    padding: 10px 0;
+    display: inline-block;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.productGramesContainer{
+    text-align: center;
+}
+
+.productGramesContainer h6{
+    padding: 10px 0;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.productGramesContainer ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.productGrindingsContainer{
+    text-align: center;
+}
+
+.productGrindingsContainer h6{
+    padding: 10px 0;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.productGrindingsContainer ul {
+    padding-bottom: 20px;
+    column-gap: 15px;
+    row-gap: 5px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.productGrindingsContainer li {
+    list-style: inside ;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+/* ? PERFIL DETAIL */
+
+.dashboard_UserDetail{
+    margin-top: 20px;
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 2px;
+}
+
+.dashboard_UserDetail .userImageContainer{
+    max-width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.dashboard_UserDetail img{
+    margin: 10px;
+    width: 100%;
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 5px;
+}
+
+.dashboard_UserDetail .userTitle{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.dashboard_UserDetail .userTitle h6{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    border-bottom: solid 2px var(--lox);
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+.userDataContainer .userName {
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer .userLastName {
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer .userEmail {
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer .userRol {
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer p{
+    margin-left: 10px;
+}
+
+.userDataContainer span{
+    font-weight: 700;
+}
+
+.userDataContainer .userCountry{
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer .userCity{
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer .userStreet{
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.userDataContainer span{
+    font-weight: 700;
+}
+
+.userDataContainer{
+    text-align: center;
+    padding-bottom: 15px ;
+}
+
+.userDataContainer h6 {
+    padding-bottom: 10px;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+}
+
+/* ? CARDS DE CANTIDAD DE PRODUCTOS POR MOLIENDA */
+
+.dashboard_productsGrinding{
+    margin-top: 20px;
+    border: solid 1px var(--gray-pastel-ligth);
+    border-radius: 2px;
+}
+
+.dashboard_productsGrinding .grindingTitle{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.grindingTitle h6{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    border-bottom: solid 2px blue;
+    text-transform: uppercase;
+    min-width: auto;
+    max-width: 90%;
+    margin-bottom: 10px;
+}
+
+.grindingCard{
+    margin: 15px;
+    border: solid 1px var(--gray-pastel);
+    border-left: solid 3px blue;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.grindingCard h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.grindingCard p{
+    text-align: center;
+}
+
+/**  -------------------- COMPONENTE PRODUCTS LIST -------------------- */
+
+.productListGeneral table {
+    border-collapse: collapse;
+    width: 100%;
+    border: solid 1px var(--gray-pastel);
+    border-radius: 10px;
+    table-layout: fixed;
+}
+
+.productListGeneral table thead tr{
+    text-transform: uppercase;
+    border-bottom: solid 2px var(--lox);
+}
+
+.productListGeneral table thead tr{
+    border-bottom: solid 2px var(--lox);
+}
+
+.productListGeneral table thead tr th{
+    padding: 15px 10px ;
+    text-align: center;
+}
+
+.productListGeneral table tbody tr td{
+    font-size: 14px;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: solid 1px var(--gray-pastel);
+}
+
+.productListGeneral table tbody tr td div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* AJUSTAR ANCHO DE CADA COLUMNA */
+
+thead th:nth-child(1) {
+    width: 2%;
+}
+
+thead th:nth-child(2) {
+    width: 5%;
+}
+
+thead th:nth-child(3) {
+    width: 3%;
+}
+
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+thead th:nth-child(5) {
+    width: 5%;
+}
+
+thead th:nth-child(6) {
+    width: 15%;
+}
+
+/* OCULTANDO EN 361PX */
+
+.thOcultoCuatro {
+    display: none;
+}
+
+.thOcultoCinco {
+    display: none;
+}
+
+.thOcultoSeis {
+    display: none;
+}
+
+.productListGeneral{
+    border-radius: 5px;
+    margin: 2%;
+    background-color: white;
+}
+
+.titleProductListContainer{
+    margin-top: 15px;
+    text-align: center;
+
+}
+
+
+/* TODO ---------------------------------------- SEPARADOR DE QUERYS ---------------------------------------- */
+
+/* ! -------------------- QUERYY SELECTOR 480PX --------------------  */
+
+@media only screen and (min-width: 480px) {
+
+    /**  -------------------- COMPONENTE FOOTER -------------------- */
+
+    .newFooter__itemsBox{
+        border-left: solid 1px var(--lox);
+    }
+
+    .newFooter__container h4 {
+        font-size: 16px;
+    }
+
+    .newFooter__container p {
+        font-size: 12px;
+    }
+
+    /**  -------------------- COMPONENTE DASHBOARD -------------------- */
+
+    /* ? PRODUCT DETAIL */
+
+    .dashboard_ProductDetail .ProductTitle h6{
+        font-size: 1.3em;
+    }
+
+    .dashboard_card h4{
+        font-size: 1em;
+    }
+
+    .dashboard_card p{
+        font-size: 1.2em;
+    }
+
+    .gramesContainer span{
+        font-size: 1.1em;
+    }
+
+    /* ? PERFIL DETAIL */
+
+    .userTitle{
+        grid-area: userTitle;
+    }
+
+    .userImageContainer{
+        grid-area: userImageContainer;
+    }
+
+    .userDataContainer {
+        grid-area: userDataContainer;
+    }
+
+    .userDirectionContainer{
+        grid-area: userDirectionContainer;
+    }
+
+    .dashboard_UserDetail{
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        grid-template-areas: 
+            "userTitle userTitle"
+            "userImageContainer userDataContainer"
+        ;
+    }
+
+    .dashboard_UserDetail .userTitle{
+        padding-bottom: 15px;
+    }
+
+    .userDataContainer{
+        text-align: left;
+        padding-bottom: 15px;
+        padding-right: 15px;
+    }
+
+    .userDataContainer h6{
+        margin-left: 15px;
+    }
+
+    .dashboard_UserDetail .userTitle h6{
+        font-size: 1.3em;
+    }
+
+    .dashboard_UserDetail .userImageContainer {
+        padding: 0 0 10px 10px;
+    }
+
+    .dashboard_UserDetail img {
+        margin: 0;
+    }
+
+    /* ? CARDS DE CANTIDAD DE PRODUCTOS POR MOLIENDA */
+
+    .dashboard_productsGrinding .productsGrinding__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /**  -------------------- COMPONENTE PRODUCTS LIST -------------------- */
+
+    /* OCULTANDO EN 361PX */
+
+    .thOcultoCinco {
+        display: revert;
+    }
+
+}
+
+/* ! -------------------- QUERYY SELECTOR 768PX --------------------  */
+
+@media only screen and (min-width: 768px) {
+    
+    /** -------------------- COMPONENTE NAVBAR -------------------- */
+
+    header .nav-btn {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    nav a{
+        font-size: 1rem;
+        padding: 8px;
+        font-weight: bold;
+    }
+
+    nav a:hover{
+        transition: 1s;
+        border-radius: 5px;
+        color: black;
+        background-color: orange;
+    }
+
+    header nav{
+        position: relative;
+        top: initial;
+        left: initial;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--negro-pastel);
+        transition: none;
+        transform: none;
+    }
+
+    /**  -------------------- COMPONENTE FOOTER -------------------- */
+
+    .newFooter__desktop{
+        display: block;
+    }
+
+    .newFooter__container{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    /**  -------------------- COMPONENTE DASHBOARD -------------------- */
+
+    .dashboard_cardContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dashboard_card{
+        height: 100px;
+    }
+
+    .dashboard_ProductDetail .ProductTitle h6{
+        font-size: 1.3em;
+    }
+
+    .dashboard_card h4{
+        font-size: .8em;
+    }
+
+    .dashboard_card p{
+        font-size: 1em;
+    }
+
+    .gramesContainer span{
+        font-size: 1em;
+    }
+
+    .userDataContainer div{
+        padding: 8px 0;
+    }
+
+    /**  -------------------- COMPONENTE PRODUCTS LIST -------------------- */
+
+    /* OCULTANDO EN 361PX */
+
+    .thOcultoCuatro {
+        display: revert;
+    }
+
+}
+
+/* ! -------------------- QUERYY SELECTOR 992PX --------------------  */
+
+@media only screen and (min-width: 992px) {
+
+    /**  -------------------- COMPONENTE DASHBOARD -------------------- */
+    
+    .ProductTitle {
+        grid-area: ProductTitle;
+    }
+
+    .productImageContainer{
+        grid-area: productImageContainer;
+    }
+
+    .productDescriptionContainer{
+        grid-area: productDescriptionContainer;
+    }
+
+    .productGramesContainer{
+        grid-area: productGramesContainer;
+    }
+
+    .productGrindingsContainer{
+        grid-area: productGrindingsContainer;
+    }
+
+    .dashboard_ProductDetail{
+        border-left: solid 3px var(--lox);
+        padding-right: 15px;
+        display: grid;
+        grid-template-columns: 1fr .7fr 1fr;
+        grid-template-areas: 
+            "productImageContainer ProductTitle ProductTitle"
+            "productImageContainer productDescriptionContainer productDescriptionContainer"
+            "productImageContainer productGramesContainer productGramesContainer"
+            "productImageContainer productGrindingsContainer productGrindingsContainer"
+        ;
+    }
+
+    .productDescriptionContainer p{
+        padding: 0 0 15px;
+    }
+
+    .productGramesContainer h6{
+        padding: 6px 0;
+        font-size: .8em;
+    }
+    
+    .productGrindingsContainer h6{
+        font-size: .8em;
+        padding: 6px 0;
+        text-align: left;
+    }
+
+    .productGramesContainer{
+        display: flex;
+        margin-left: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px 0;
+        border-top: solid 1px var(--gray-pastel);
+        border-bottom: solid 1px var(--gray-pastel);
+    }
+
+    .productGramesContainer ul{
+        padding: 6px;
+        gap: 0;
+    }
+
+    .productGramesContainer li {
+        font-size: .8em;
+        padding: 0 10px;
+        border-right: solid 2px var(--lox);
+    }
+
+    .productGrindingsContainer{
+        align-items: center;
+        display: flex;
+        margin-left: 20px;
+        padding: 8px 0;
+    }
+
+    .productGrindingsContainer li{
+        font-size: .8em;
+        list-style: none;
+    }
+
+    .productGrindingsContainer ul{
+        padding-bottom: 0px;
+        column-gap: 0;
+    }
+
+    .productGrindingsContainer li {
+        padding: 0 10px;
+        border-radius: 0;
+        border-right: solid 2px var(--lox);
+    }
+
+    /* ? PERFIL DETAIL */
+
+    .dashboard_UserDetail{
+        border-left: solid 3px var(--lox);
+        padding-right: 15px;
+    }
+
+    .userDataContainer{
+        margin-top: 10px;
+    }
+
+    .dashboard_UserDetail .userImageContainer{
+        margin: initial;
+    }
+
+    /* ? CARDS DE CANTIDAD DE PRODUCTOS POR MOLIENDA */
+
+    .dashboard_cardContainer{
+        grid-area: dashboard_cardContainer;
+    }
+
+    .dashboard_ProductDetail{
+        grid-area: dashboard_ProductDetail;
+    }
+
+    .dashboard_UserDetail{
+        grid-area: dashboard_UserDetail;
+    }
+
+    .dashboard_productsGrinding{
+        grid-area: dashboard_productsGrinding;
+    }
+
+
+    .dashboardGridGeneral{
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "dashboard_cardContainer dashboard_cardContainer"
+            "dashboard_ProductDetail dashboard_productsGrinding"
+            "dashboard_UserDetail dashboard_productsGrinding"
+        ;
+    }
+
+    .dashboard_productsGrinding .productsGrinding__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard_productsGrinding{
+        margin-top: 0;
+    }
+
+    /**  -------------------- COMPONENTE PRODUCTS LIST -------------------- */
+
+    /* OCULTANDO EN 361PX */
+
+    .thOcultoSeis {
+        display: revert;
+    }
+
+
+}
+
+/* ! -------------------- QUERYY SELECTOR 1200PX --------------------  */
+
+@media only screen and (min-width: 1200px) {
+
+    /**  -------------------- GENERAL -------------------- */
+
+    .containerCenterWeb{
+        max-width: 1400px;
+        margin: 30px auto;
+    }
+    
+}
