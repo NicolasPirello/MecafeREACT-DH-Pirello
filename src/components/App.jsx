@@ -28,7 +28,7 @@ function App() {
 
         <div className="contenedorPrincipal">
           <Routes>
-            <Route path="/" element={ <Dashboard/> } />
+            <Route path="/MecafeREACT-DH-Pirello" element={ <Dashboard/> } />
             <Route path="/products" element={ <ProductsList/> } />
             <Route path="*" element={ <NotFound/> } />
           </Routes>

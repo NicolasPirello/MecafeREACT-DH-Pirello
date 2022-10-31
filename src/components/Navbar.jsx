@@ -25,7 +25,7 @@ function Navbar () {
                 </h3>
 
                 <nav ref={navRef}>
-                    <Link onClick={showNavbar} to="/">Dashboard General</Link>
+                    <Link onClick={showNavbar} to="MecafeREACT-DH-Pirello">Dashboard General</Link>
                     <Link onClick={showNavbar} to="/products">Listado Productos</Link>
                     <button onClick={showNavbar} className="nav-btn nav-close-btn headerBtnClose">  {/* Lo ponemos en el boton con el fin de agregar o quitar la clase */}
                         <FaTimes />
