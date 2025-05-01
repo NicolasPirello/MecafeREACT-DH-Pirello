@@ -6,7 +6,7 @@ function ProductList () {
     let [ productList, setProductList ] = useState([])
 
     useEffect ( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/productsActives")
+        fetch("https://mecafe-production.up.railway.app/api/productsActives")
             .then(response => response.json())
             .then(result => {
                 setProductList(result)

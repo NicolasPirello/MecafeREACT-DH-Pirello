@@ -37,7 +37,7 @@ function Dashboard() {
     let [ totalProductsTypeGrinding , setTotalProductsTypeGrinding ] = useState([])
 
     useEffect( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/totalProductsTypeGrinding")
+        fetch("https://mecafe-production.up.railway.app/api/totalProductsTypeGrinding")
             .then(response => response.json())
             .then(result => {
                 setTotalProductsTypeGrinding(result)
@@ -50,7 +50,7 @@ function Dashboard() {
 
     useEffect( () => {
 
-        fetch (`https://mecafeg6-dh-pirello-production.up.railway.app/api/totalProductGrames`)
+        fetch (`https://mecafe-production.up.railway.app/api/totalProductGrames`)
             .then(response => response.json())
             .then(result => {
                 setTotalProductsGrames(result)
@@ -65,7 +65,7 @@ function Dashboard() {
     let [ totalProducts , setTotalProduct ] = useState([])
 
     useEffect( () => {
-        fetch ("https://mecafeg6-dh-pirello-production.up.railway.app/api/totalProducts")
+        fetch ("https://mecafe-production.up.railway.app/api/totalProducts")
             .then(response => response.json())
             .then(result => {
                 setTotalProduct(result)
@@ -77,7 +77,7 @@ function Dashboard() {
     let [ totalUsers, setTotalUsers ] = useState([])
 
     useEffect ( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/totalUsers")
+        fetch("https://mecafe-production.up.railway.app/api/totalUsers")
             .then(response => response.json())
             .then(result => {
                 setTotalUsers(result)
@@ -89,7 +89,7 @@ function Dashboard() {
     let [ totalRolesUser, setTotalRolesUser ] = useState([])
 
     useEffect ( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/totalRolesUser")
+        fetch("https://mecafe-production.up.railway.app/api/totalRolesUser")
             .then(response => response.json())
             .then(result => {
                 setTotalRolesUser(result)
@@ -101,7 +101,7 @@ function Dashboard() {
     let [ lastProductCreated, setLastProductCreated ] = useState([])
 
     useEffect( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/lastProductCreated")
+        fetch("https://mecafe-production.up.railway.app/api/lastProductCreated")
             .then(response => response.json())
             .then(result => {
                 setLastProductCreated([result])
@@ -113,7 +113,7 @@ function Dashboard() {
     let [ lastUserCreated, setLastUserCreated ] = useState([])
 
     useEffect ( () => {
-        fetch("https://mecafeg6-dh-pirello-production.up.railway.app/api/lastUserCreated")
+        fetch("https://mecafe-production.up.railway.app/api/lastUserCreated")
             .then(response => response.json())
             .then(result => {
                 setLastUserCreated([result])
@@ -157,7 +157,7 @@ function Dashboard() {
 
                 {lastProductCreated.map((elementoGeneral, index) => {
 
-                    let rutaImagenProucto = `https://mecafeg6-dh-pirello-production.up.railway.app/img/productos/${elementoGeneral.images_products[0].path}`
+                    let rutaImagenProucto = `https://mecafe-production.up.railway.app/img/productos/${elementoGeneral.images_products[0].path}`
 
                     return(
 
@@ -206,7 +206,7 @@ function Dashboard() {
 
                 {lastUserCreated.map((elementoGeneral, index) => {
 
-                    let rutaImagen = `https://mecafeg6-dh-pirello-production.up.railway.app/img/profiles/${elementoGeneral.image}`
+                    let rutaImagen = `https://mecafe-production.up.railway.app/img/profiles/${elementoGeneral.image}`
 
                     let directionDefault = {}
 
