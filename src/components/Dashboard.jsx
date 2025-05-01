@@ -58,8 +58,6 @@ function Dashboard() {
 
     }, [])
 
-    console.log(totalProductsGrames)
-
     /* Total de Productos General */
 
     let [ totalProducts , setTotalProduct ] = useState([])
@@ -289,22 +287,13 @@ function Dashboard() {
 
                     <div className="productsGrinding__grid">
 
-                        {totalProductsTypeGrinding.map((elemento, index) => {
-
-                            let quantity = ""
-
-                            elemento.products.map(element => {
-                                return quantity = element.totalProducts
-                            })
-
-                            return(
-                                <CardGrinding
-                                    namegrinding= {elemento.name}
-                                    quantityProduct= {quantity}
-                                    key={index}
-                                />
-                            )
-                        })}
+                    {totalProductsTypeGrinding.map((elemento, index) => (
+                    <CardGrinding
+                        namegrinding={elemento.name}
+                        quantityProduct={elemento.totalProducts}
+                        key={index}
+                    />
+                ))}
 
                     </div>
 
