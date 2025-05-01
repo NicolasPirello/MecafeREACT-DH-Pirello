@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MecafeREACT-DH-Pirello/static/css/main.406e641d.css",
-    "main.js": "/MecafeREACT-DH-Pirello/static/js/main.88185092.js",
+    "main.js": "/MecafeREACT-DH-Pirello/static/js/main.97ff28e7.js",
     "static/js/787.75b1a10d.chunk.js": "/MecafeREACT-DH-Pirello/static/js/787.75b1a10d.chunk.js",
     "index.html": "/MecafeREACT-DH-Pirello/index.html",
     "main.406e641d.css.map": "/MecafeREACT-DH-Pirello/static/css/main.406e641d.css.map",
-    "main.88185092.js.map": "/MecafeREACT-DH-Pirello/static/js/main.88185092.js.map",
+    "main.97ff28e7.js.map": "/MecafeREACT-DH-Pirello/static/js/main.97ff28e7.js.map",
     "787.75b1a10d.chunk.js.map": "/MecafeREACT-DH-Pirello/static/js/787.75b1a10d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.406e641d.css",
-    "static/js/main.88185092.js"
+    "static/js/main.97ff28e7.js"
   ]
 }
