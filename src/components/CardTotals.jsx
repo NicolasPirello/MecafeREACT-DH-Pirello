@@ -1,10 +1,12 @@
 
 
-function CardTotals ( { title, quantity, icon } ) {
+function CardTotals ( { title, quantity, icon, cardClass = "" } ) {
+
+    const cardClasses = `dashboard_card ${cardClass}`.trim();
 
     return(
 
-        <div className="dashboard_card dashboard_cardColor">
+        <div className={cardClasses}>
 
             <div className="cardContainer">
                 <div>

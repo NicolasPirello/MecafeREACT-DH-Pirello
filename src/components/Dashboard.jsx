@@ -125,28 +125,31 @@ function Dashboard() {
         <div className="containerCenterWeb">
 
             <div className="generalFormat dashboardGridGeneral">
-                
+
                 {/* Tarjetas - API CONSUMIDA */}
 
                 <div className="dashboard_cardContainer">
 
 
-                    <CardTotals 
+                    <CardTotals
                         title="Total de Productos"
                         quantity={totalProducts.totalProductsActives}
                         icon= <MdOutlineProductionQuantityLimits className="cardIcon"/>
+                        cardClass="dashboard_card--success"
                     />
 
-                    <CardTotals 
+                    <CardTotals
                         title="Total de Usuarios"
                         quantity={totalUsers.totalUsers}
                         icon= <AiOutlineUser className="cardIcon"/>
+                        cardClass="dashboard_card--info"
                     />
 
-                    <CardTotals 
+                    <CardTotals
                         title="Total Roles de Usuario"
                         quantity={totalRolesUser.totalRoles}
                         icon= <AiOutlineUserAdd className="cardIcon"/>
+                        cardClass="dashboard_card--warning"
                     />
 
                 </div>
@@ -166,11 +169,11 @@ function Dashboard() {
                             </div>
 
                             <div className="productImageContainer">
-                                <img src={rutaImagenProucto} alt=""/>
+                                <img src={rutaImagenProucto} alt={elementoGeneral.name}/>
                             </div>
 
                             <div className="productDescriptionContainer">
-                                    <h6>Descripcion del Producto</h6>
+                                    <h6>Descripción del Producto</h6>
                                     <p>{elementoGeneral.description} Mecafe es disfrutar del mejor cafe, una excelente calidad y el proceso mas natural para cuidar tu salud.</p>
                             </div>
 
@@ -219,15 +222,15 @@ function Dashboard() {
                     })
 
                     return(
-                        
+
                         <div key={index} className="dashboard_UserDetail">
 
                             <div className="userTitle">
-                                <h6>Ultimo usuario</h6>
+                                <h6>Último usuario</h6>
                             </div>
 
                             <div className="userImageContainer">
-                                <img src={rutaImagen} alt=""/>
+                                <img src={rutaImagen} alt={`${elementoGeneral.firstName} ${elementoGeneral.lastName}`}/>
                             </div>
 
                             <div className="userDataContainer">
@@ -255,7 +258,7 @@ function Dashboard() {
                                 </div>
 
                                 <div className="userCountry">
-                                    <span>Pais:</span>
+                                    <span>País:</span>
                                     <p>{directionDefault.country ? directionDefault.country : "Sin asignar"}</p>
                                 </div>
 
@@ -292,6 +295,7 @@ function Dashboard() {
                         namegrinding={elemento.name}
                         quantityProduct={elemento.totalProducts}
                         key={index}
+                        cardClass={index % 3 === 0 ? "grindingCard--success" : index % 3 === 1 ? "grindingCard--warning" : ""}
                     />
                 ))}
 
