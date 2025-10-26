@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import Dashboard from "./Dashboard";
 import NotFound from "./NotFound";
 import ProductsList from "./ProductsList";
-import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 
 /* 

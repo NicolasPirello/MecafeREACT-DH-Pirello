@@ -1,0 +1,444 @@
+/* Dashboard Component - BEM Methodology */
+
+/* Element: Loading state */
+.dashboard__loading {
+    text-align: center;
+    padding: 50px;
+}
+
+.dashboard__loading-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard__loading-title {
+    color: #61dafb;
+    margin-bottom: 1rem;
+}
+
+.dashboard__loading-text {
+    color: #999;
+}
+
+/* Element: Compact Mock Indicator */
+.dashboard__mock-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 1.5rem;
+    color: #856404;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.dashboard__mock-indicator-icon {
+    font-size: 0.875rem;
+}
+
+.dashboard__mock-indicator-text {
+    white-space: nowrap;
+}
+
+/* Layout Principal - Estructura Vertical */
+.dashboard__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Sección de Tarjetas Principales */
+.dashboard__cards-section {
+    margin-bottom: 2rem;
+}
+
+/* Contenido Principal - Layout Horizontal */
+.dashboard__main-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Columna Izquierda - Detalles */
+.dashboard__left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Columna Derecha - Molienda */
+.dashboard__right-content {
+    flex: 0 0 400px;
+}
+
+/* Grid de Tarjetas Principales */
+.dashboard__card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Sección de Molienda */
+.dashboard__grinding-section {
+    flex: 1;
+    min-width: 300px;
+    background: var(--gray-50);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-200);
+}
+
+.dashboard__section-header {
+    margin-bottom: 1rem;
+}
+
+.dashboard__section-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--info) 0%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Card de Producto - Layout Horizontal */
+.dashboard__product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.dashboard__product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard__product-header {
+    margin-bottom: 1rem;
+}
+
+.dashboard__product-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dashboard__product-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.dashboard__product-image {
+    flex: 0 0 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--gray-200);
+}
+
+.dashboard__product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.dashboard__product-image:hover img {
+    transform: scale(1.05);
+}
+
+.dashboard__product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard__product-description {
+    flex: 1;
+}
+
+.dashboard__product-description p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--gray-600);
+    margin: 0;
+}
+
+.dashboard__product-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.dashboard__spec-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dashboard__spec-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-700);
+}
+
+.dashboard__spec-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.dashboard__spec-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: white;
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.dashboard__spec-tag:hover {
+    border-color: var(--primary-300);
+}
+
+.dashboard__spec-tag--accent {
+    background: var(--gradient-accent);
+    border: none;
+    color: white;
+}
+
+.dashboard__spec-tag--accent:hover {
+    filter: brightness(1.1);
+}
+
+/* Card de Usuario - Layout Mejorado */
+.dashboard__user-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.dashboard__user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard__user-header {
+    margin-bottom: 1rem;
+}
+
+.dashboard__user-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dashboard__user-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.dashboard__user-image {
+    flex: 0 0 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-200);
+    background: var(--gray-100);
+}
+
+.dashboard__user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.dashboard__user-image:hover img {
+    transform: scale(1.05);
+}
+
+.dashboard__user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard__user-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dashboard__user-first {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.dashboard__user-last {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.dashboard__user-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dashboard__user-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.dashboard__detail-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-600);
+}
+
+.dashboard__detail-value {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray-800);
+    text-align: right;
+}
+
+.dashboard__detail-value--role {
+    background: var(--primary-100);
+    color: var(--primary-700);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard__main-content {
+        flex-direction: column;
+    }
+
+    .dashboard__right-content {
+        flex: 1;
+        width: 100%;
+    }
+
+    .dashboard__product-content,
+    .dashboard__user-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard__product-image {
+        align-self: center;
+    }
+
+    .dashboard__user-image {
+        align-self: center;
+    }
+
+    .dashboard__user-detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .dashboard__detail-value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard__layout {
+        gap: 1.5rem;
+    }
+
+    .dashboard__main-content {
+        gap: 1rem;
+    }
+
+    .dashboard__left-content {
+        gap: 1rem;
+    }
+
+    .dashboard__card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard__product-card,
+    .dashboard__user-card {
+        padding: 1rem;
+    }
+
+    .dashboard__grinding-section {
+        padding: 1rem;
+    }
+
+    .dashboard__mock-indicator {
+        font-size: 0.7rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard__product-image {
+        flex: 0 0 80px;
+        height: 80px;
+    }
+
+    .dashboard__user-image {
+        flex: 0 0 60px;
+        height: 60px;
+    }
+
+    .dashboard__product-title,
+    .dashboard__user-title {
+        font-size: 0.75rem;
+    }
+
+    .dashboard__spec-items {
+        gap: 0.375rem;
+    }
+
+    .dashboard__spec-tag {
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+}
