@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MecafeREACT-DH-Pirello/static/css/main.2487e614.css",
-    "main.js": "/MecafeREACT-DH-Pirello/static/js/main.296bb56a.js",
+    "main.css": "/MecafeREACT-DH-Pirello/static/css/main.db3d5e8c.css",
+    "main.js": "/MecafeREACT-DH-Pirello/static/js/main.ac4b6a3b.js",
     "static/js/787.75b1a10d.chunk.js": "/MecafeREACT-DH-Pirello/static/js/787.75b1a10d.chunk.js",
     "index.html": "/MecafeREACT-DH-Pirello/index.html",
-    "main.2487e614.css.map": "/MecafeREACT-DH-Pirello/static/css/main.2487e614.css.map",
-    "main.296bb56a.js.map": "/MecafeREACT-DH-Pirello/static/js/main.296bb56a.js.map",
+    "main.db3d5e8c.css.map": "/MecafeREACT-DH-Pirello/static/css/main.db3d5e8c.css.map",
+    "main.ac4b6a3b.js.map": "/MecafeREACT-DH-Pirello/static/js/main.ac4b6a3b.js.map",
     "787.75b1a10d.chunk.js.map": "/MecafeREACT-DH-Pirello/static/js/787.75b1a10d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2487e614.css",
-    "static/js/main.296bb56a.js"
+    "static/css/main.db3d5e8c.css",
+    "static/js/main.ac4b6a3b.js"
   ]
 }

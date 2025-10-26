@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Mecafe Dashboard - 404 Not Found" />
+    <title>Mecafe - Página no encontrada</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #282c34;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #61dafb;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #61dafb;
+            color: #282c34;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #21a1f1;
+        }
+        .coffee-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="coffee-icon">☕</div>
+        <h1>404</h1>
+        <h2>¡Ups! Café no encontrado</h2>
+        <p>La página que buscas parece que se evaporó...</p>
+        <p>Pero no te preocupes, tenemos mucho buen café para ti:</p>
+        <div style="margin-top: 2rem;">
+            <a href="./#/MecafeREACT-DH-Pirello" class="btn">🏠 Ir al Dashboard</a>
+            <a href="./#/products" class="btn">📦 Ver Productos</a>
+        </div>
+    </div>
+
+    <script>
+        // Redireccionar automáticamente al dashboard después de 5 segundos
+        setTimeout(function() {
+            window.location.href = './#/MecafeREACT-DH-Pirello';
+        }, 5000);
+    </script>
+</body>
+</html>
